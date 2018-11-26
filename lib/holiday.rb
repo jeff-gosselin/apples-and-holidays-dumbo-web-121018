@@ -63,11 +63,11 @@ def all_supplies_in_holidays(holiday_hash)
   # etc.
   
   holiday_hash.each do |key, val|
-    p key.capitalize.to_s + ":"
-    val.each do |holiday, supplies|
-      p holiday.capitalize.to_s + ":"
-    end
+  puts key.capitalize.to_s + ":"
+  val.each do |holiday, supplies|
+    print "  " + holiday.capitalize.to_s + ": " + supplies.join(", ") + "\n"
   end
+end
   
   
 end
