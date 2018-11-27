@@ -65,13 +65,13 @@ def all_supplies_in_holidays(holiday_hash)
   holiday_hash.each do |key, val|
     season = key.capitalize.to_s + ":"
     puts season.chomp
-    
+
     val.each do |holiday, supplies|
-      holidays = "  " + holiday.capitalize.to_s + ": " + supplies.join(", ")
-      puts holidays.chomp
-      binding.pry
+      hol_string = "  #{holiday.to_s.split(/ |\_/).map(&:capitalize).join(" ")}: "
+      result = "#{hol_string.chomp}#{supplies.join(", ")}"
+      puts result
     end
-  end
+end
   
   
 end
